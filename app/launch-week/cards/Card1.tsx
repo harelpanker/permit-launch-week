@@ -38,10 +38,10 @@ const Card1 = () => {
         </div>
         {/* swag */}
         <div
-          className={`${times.className} absolute -right-[6rem] -top-4 flex size-[150px] items-center justify-center text-center text-sm font-bold italic text-white xl:size-[150px]`}>
+          className={`${times.className} pointer-events-none absolute -right-[6rem] -top-4 z-10 flex size-[150px] items-center justify-center text-center text-sm font-bold italic text-white xl:-top-8 xl:size-[200px] xl:text-xl`}>
           <div
             style={{ lineHeight: 1.2 }}
-            className='absolute inset-0 z-20 flex items-center justify-center xl:-rotate-12'>
+            className='absolute inset-0 z-20 flex items-center justify-center xl:-rotate-6'>
             for a chance
             <br />
             to get a

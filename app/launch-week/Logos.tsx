@@ -39,7 +39,7 @@ const Logos = () => {
       {/*  */}
       <div className='absolute -top-2 right-4 w-[120px] sm:w-[250px] xl:right-[2%] xl:w-[400px]'>
         <div className='absolute left-[5%] top-[25%] sm:left-[4%]'>{days}</div>
-        <div className='absolute left-[30%] top-[22%] sm:left-[28%]'>
+        <div className='absolute left-[30%] top-[22%] sm:left-[28%] xl:left-[29%]'>
           {hours}
         </div>
         <div className='absolute left-[55%] top-[23%] sm:left-[53%]'>
