@@ -1,7 +1,7 @@
 import styles from '@/app/styles.module.css';
 import Logos from '@/app/launch-week/Logos';
 import Marquee from '@/app/Marquee';
-import Cards from './Cards';
+import Cards from '@/app/launch-week/Cards';
 
 const Page = () => {
   return (

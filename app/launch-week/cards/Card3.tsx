@@ -1,6 +1,10 @@
+'use client';
+
+import { useState } from 'react';
 import localFont from 'next/font/local';
 import Image from 'next/image';
 import styles from '@/app/styles.module.css';
+import Modal from '@/app/launch-week/cards/Modal';
 
 import cImage from '@/app/launch-week/assets/c-pink.svg';
 import cardImage from '@/app/launch-week/assets/keyboard.png';
@@ -22,6 +26,10 @@ const times = localFont({
 });
 
 const Card3 = () => {
+  let [open, setOpen] = useState<boolean>(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <li className='relative flex flex-col items-center justify-center'>
       <div className='relative'>
@@ -49,11 +57,16 @@ const Card3 = () => {
       </div>
       <div className='relative'>
         <div className='relative z-20 -mt-[12%]'>
-          <button type='button' className={`${styles.button}`}>
+          <button
+            type='button'
+            onClick={handleOpen}
+            className={`${styles.button}`}>
             Join the Livestreams
           </button>
         </div>
       </div>
+
+      <Modal open={open} handleClose={handleClose} />
     </li>
   );
 };
