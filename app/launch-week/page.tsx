@@ -1,13 +1,14 @@
-import { FC } from 'react';
+
+
 import styles from '@/app/styles.module.css';
-import Marquee from '../Marquee';
+import Logos from '@/app/launch-week/Logos';
+import Marquee from '@/app/Marquee';
 
-type PageProps = {};
-
-const Page: FC<PageProps> = ({}) => {
+const Page = () => {
   return (
     <section
-      className={`${styles.section} relative flex min-h-screen flex-col gap-y-[100px] px-4 pb-32 pt-[270px] sm:gap-y-[170px] sm:pt-[320px] lg:px-12 xl:gap-y-14`}>
+      className={`${styles.section} relative flex min-h-screen flex-col px-4 pb-32 pt-[2rem] lg:px-12`}>
+      <Logos />
       <Marquee />
     </section>
   );

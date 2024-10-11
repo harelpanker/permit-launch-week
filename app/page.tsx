@@ -1,6 +1,6 @@
 'use client';
-import styles from './styles.module.css';
 
+import styles from './styles.module.css';
 import Marquee from './Marquee';
 import Logos from './Logos';
 import Days from './Days';
@@ -11,8 +11,7 @@ import ButtonWrapper from './ButtonWrapper';
 import { useCountdown } from './hooks/useCountdown';
 
 const Page = () => {
-  const targetDate = '2024-10-28T00:00:00';
-  const { days, hours, minutes, seconds } = useCountdown(targetDate);
+  const { days, hours, minutes, seconds } = useCountdown();
 
   return (
     <section

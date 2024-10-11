@@ -5,7 +5,6 @@ import logoCenter from '@/app/assets/logo-center.svg';
 const Logos = () => {
   return (
     <>
-      {' '}
       <Image
         priority
         src={logo}

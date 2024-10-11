@@ -7,7 +7,8 @@ interface TimeLeft {
   seconds: number;
 }
 
-export const useCountdown = (targetDate: string) => {
+export const useCountdown = () => {
+  const targetDate = '2024-10-28T00:00:00';
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   function calculateTimeLeft(): TimeLeft {
