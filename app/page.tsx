@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import localFont from 'next/font/local';
 import styles from './styles.module.css';
 
 import Marquee from './Marquee';
@@ -19,20 +18,6 @@ interface TimeLeft {
   seconds: number;
 }
 
-const times = localFont({
-  src: [
-    {
-      path: './assets/times-new-roman.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './assets/times-new-roman-bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-});
 const Page = () => {
   const targetDate = '2024-10-28T00:00:00';
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
