@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useViewportSize } from '@mantine/hooks';
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import {
@@ -50,6 +51,8 @@ const times = localFont({
 type DialogProps = { open: boolean; handleClose: () => void };
 
 const Modal: FC<DialogProps> = ({ open, handleClose }) => {
+  const desktopSize = 1024;
+  const { width } = useViewportSize();
   const linkDay1 = 'https://www.panker.dev/';
   const linkDay2 = 'https://www.panker.dev/';
   const linkDay3 = 'https://www.panker.dev/';
@@ -77,9 +80,9 @@ const Modal: FC<DialogProps> = ({ open, handleClose }) => {
         className='fixed inset-0 bg-white/10 backdrop-blur-xl'
       />
       <div className='fixed inset-0 flex h-full w-screen items-start justify-center overflow-y-auto text-center'>
-        <DialogPanel className='mx-auto flex w-full max-w-[90%] flex-col gap-y-10 py-10 text-white'>
+        <DialogPanel className='mx-auto flex w-[90%] max-w-[1190px] flex-col gap-y-10 py-10 text-white'>
           <div className='sticky top-[5vh] z-10'>
-            <div className='absolute inset-0 flex flex-col gap-y-10 py-12 pl-5 pr-8 sm:py-20'>
+            <div className='absolute inset-0 flex flex-col gap-y-10 py-12 pl-5 pr-8 sm:py-20 lg:py-14 xl:py-20 xl:pl-10 xl:pr-16'>
               <button
                 onClick={handleClose}
                 role='close button'
@@ -89,45 +92,65 @@ const Modal: FC<DialogProps> = ({ open, handleClose }) => {
               </button>
               <DialogTitle
                 as={'h2'}
-                className={`${helvetica.className} text-lg font-bold`}>
+                className={`${helvetica.className} text-balance text-lg font-bold xl:text-4xl`}>
                 Register and tune in to any of our Launch Week daily livestreams
                 for your chance to win an exclusive custom keyboard!
               </DialogTitle>
-              <div className='flex flex-col gap-y-6'>
-                {data1.map(({ image, link, title }) => (
-                  <ModalLink
-                    key={title}
-                    link={link}
-                    title={title}
-                    image={image}
-                  />
-                ))}
+              <div className='flex flex-col items-center gap-y-8'>
+                <div className='flex flex-col gap-y-6 lg:flex-row lg:gap-x-10'>
+                  {data1.map(({ image, link, title }) => (
+                    <ModalLink
+                      key={title}
+                      link={link}
+                      title={title}
+                      image={image}
+                    />
+                  ))}
+                </div>
+                {width > desktopSize ? (
+                  <div className='flex flex-col gap-y-6 lg:flex-row lg:gap-x-10'>
+                    {data2.map(({ image, link, title }) => (
+                      <ModalLink
+                        key={title}
+                        link={link}
+                        title={title}
+                        image={image}
+                      />
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </div>
-            <Image src={bgMobile} alt='' className='' />
+            <Image
+              src={width > desktopSize ? bgDesktop : bgMobile}
+              alt=''
+              className='w-full'
+            />
           </div>
-          <div className='relative z-20'>
-            <div className='absolute inset-0 flex flex-col gap-y-10 py-12 pl-5 pr-8 sm:py-20'>
-              <button
-                onClick={handleClose}
-                role='close button'
-                type='button'
-                className='absolute right-0 top-0 size-8'>
-                <span className='sr-only'>Close modal</span>
-              </button>
-              <div className='flex flex-col gap-y-6'>
-                {data2.map(({ image, link, title }) => (
-                  <ModalLink
-                    key={title}
-                    link={link}
-                    title={title}
-                    image={image}
-                  />
-                ))}
+          {width < desktopSize ? (
+            <div className='relative z-20'>
+              <div className='absolute inset-0 flex flex-col gap-y-10 py-12 pl-5 pr-8 sm:py-20'>
+                <button
+                  onClick={handleClose}
+                  role='close button'
+                  type='button'
+                  className='absolute right-0 top-0 size-8'>
+                  <span className='sr-only'>Close modal</span>
+                </button>
+                <div className='flex flex-col gap-y-6'>
+                  {data2.map(({ image, link, title }) => (
+                    <ModalLink
+                      key={title}
+                      link={link}
+                      title={title}
+                      image={image}
+                    />
+                  ))}
+                </div>
               </div>
+              <Image src={bgMobile} alt='' className='w-full' />
             </div>
-            <Image src={bgMobile} alt='' className='' />
-          </div>
+          ) : null}
         </DialogPanel>
       </div>
     </Dialog>

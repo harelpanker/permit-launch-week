@@ -25,7 +25,7 @@ const ModalLink: FC<ModalLinkProps> = ({ link, title, image }) => {
       href={link}
       target='_blank'
       rel='noopener noreferrer'
-      className={`group flex flex-col items-center text-2xl font-bold ${times.className}`}>
+      className={`group flex flex-col items-center text-2xl font-bold lg:max-w-[190px] lg:text-xl xl:max-w-max xl:text-2xl ${times.className}`}>
       <Image
         src={image}
         alt=''
@@ -33,7 +33,7 @@ const ModalLink: FC<ModalLinkProps> = ({ link, title, image }) => {
         width={253}
         height={190}
       />
-      <h3 className='transition duration-300 group-hover:italic group-hover:text-[#FF8B3E] group-hover:underline'>
+      <h3 className='text-pretty transition duration-300 group-hover:italic group-hover:text-[#FF8B3E] group-hover:underline'>
         {title}
       </h3>
     </a>
