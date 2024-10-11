@@ -34,7 +34,7 @@ const Logos = () => {
         priority
         src={logo}
         alt='logo'
-        className='absolute left-[1rem] top-2 w-[86px] sm:left-[2rem] sm:w-[146px] xl:left-[5%]'
+        className='absolute left-[1rem] top-2 w-[120px] sm:left-[2rem] sm:w-[146px] xl:left-[5%]'
       />
       {/*  */}
       <div className='absolute -top-2 right-4 w-[120px] sm:w-[250px] xl:right-[2%] xl:w-[400px]'>
