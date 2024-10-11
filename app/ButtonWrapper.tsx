@@ -28,7 +28,7 @@ const ButtonWrapper = () => {
       <div className='relative'>
         {/* button */}
         <a
-          className={`${styles.button} relative z-30 rounded-full text-lg font-bold lg:text-3xl`}
+          className={`${styles.button}`}
           target='_blank'
           rel='noopener noreferrer'
           href='https://app.permit.io'>

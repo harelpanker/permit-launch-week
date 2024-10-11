@@ -20,6 +20,8 @@
   padding: 20px 30px;
 
   transition: all 0.3s ease;
+
+  @apply relative z-30 rounded-full text-lg font-bold lg:text-3xl;
 }
 .button:hover {
   color: #d4adf6;
