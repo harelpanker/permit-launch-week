@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 
 import star1 from '@/app/assets/star1.svg';
 import star2 from '@/app/assets/star2.svg';
+import keyboardD from '@/app/assets/keyboardD.png';
 import keyboardM from '@/app/assets/keyboard-m.png';
 
 const times = localFont({
@@ -38,10 +39,10 @@ const ButtonWrapper: FC<ButtonWrapperProps> = ({}) => {
 
         {/* swag */}
         <div
-          className={`${times.className} absolute -right-[15px] -top-[200px] z-20 flex size-[150px] items-center justify-center text-center text-[16px] italic sm:-right-[55px] sm:-top-[350px] sm:size-[220px]`}>
+          className={`${times.className} absolute -right-[15px] -top-[200px] z-20 flex size-[150px] items-center justify-center text-center text-[16px] italic sm:-right-[55px] sm:-top-[350px] sm:size-[220px] xl:bottom-auto xl:left-auto xl:right-[-8rem] xl:top-[-10rem] xl:size-[160px]`}>
           <div
             style={{ lineHeight: 1.2 }}
-            className='absolute inset-0 z-20 flex items-center justify-center sm:text-2xl'>
+            className='absolute inset-0 z-20 flex items-center justify-center sm:text-2xl xl:-rotate-12 xl:text-[18px]'>
             A chance to
             <br />
             win a custom
@@ -52,6 +53,20 @@ const ButtonWrapper: FC<ButtonWrapperProps> = ({}) => {
             <Image src={star1} alt='' />
           </div>
         </div>
+
+        <Image
+          src={keyboardD}
+          alt=''
+          priority
+          className='absolute right-[-22rem] top-[-8rem] z-10 hidden w-[316px] max-w-none -rotate-12 xl:block'
+        />
+
+        <Image
+          src={star1}
+          alt=''
+          priority
+          className={`absolute right-[-24rem] top-[-6rem] hidden max-w-[150px] xl:block ${styles.spin}`}
+        />
 
         {/* keyboard */}
         <Image
@@ -64,8 +79,10 @@ const ButtonWrapper: FC<ButtonWrapperProps> = ({}) => {
 
         {/* swag */}
         <div
-          className={`${times.className} absolute -right-[75px] top-[10px] flex size-[170px] items-center justify-center text-center text-[16px] font-bold italic text-white`}>
-          <div className='absolute inset-0 z-20 flex items-center justify-center '>
+          className={`${times.className} absolute -right-[75px] top-[10px] flex size-[170px] items-center justify-center text-center text-[16px] font-bold italic text-white xl:left-[-7.5rem] xl:top-[-3rem] xl:size-[150px]`}>
+          <div
+            style={{ lineHeight: 1.2 }}
+            className='absolute inset-0 z-20 flex items-center justify-center xl:-rotate-12'>
             Cool SWAG
             <br />
             for EVERY

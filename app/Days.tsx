@@ -76,7 +76,7 @@ const Days: FC<DaysProps> = ({ time }) => {
         src={keyboardD}
         alt=''
         priority
-        className='absolute -bottom-[120px] -left-[120px] z-10 hidden w-[316px] max-w-none rotate-12 xl:block'
+        className='absolute -bottom-[120px] -left-[130px] z-10 hidden w-[316px] max-w-none rotate-12 xl:block'
       />
       <Image
         src={word1}
