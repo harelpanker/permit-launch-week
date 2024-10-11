@@ -46,15 +46,15 @@ const Minutes: FC<MinutesProps> = ({ time }) => {
   const { width } = useViewportSize();
 
   return (
-    <div className='absolute bottom-2 left-0 z-40 w-full max-w-[186px] sm:bottom-4 sm:max-w-[334px] xl:bottom-[54px] xl:left-[424px] xl:top-auto xl:z-20 xl:max-w-[270px]'>
+    <div className='absolute bottom-2 left-0 z-40 w-full max-w-[186px] sm:bottom-4 sm:max-w-[334px] xl:bottom-[54px] xl:left-[424px] xl:top-auto xl:z-20 xl:max-w-[270px] 2xl:bottom-[64px] 2xl:left-[508px] 2xl:max-w-[322px]'>
       <div className='absolute inset-0 z-30 flex h-full w-full items-center justify-center'>
         <div className='relative left-[-20px]'>
           <span
-            className={`${helvetica.className} text-[92px] tracking-[-0.05em] sm:text-[160px] xl:text-[140px]`}>
+            className={`${helvetica.className} text-[92px] tracking-[-0.05em] sm:text-[160px] xl:text-[140px] 2xl:text-[170px]`}>
             {time}
           </span>
           <span
-            className={`${times.className} relative -top-2 left-0 text-[30px] sm:text-[46px] xl:text-[42px]`}>
+            className={`${times.className} relative -top-2 left-0 text-[30px] sm:text-[46px] xl:text-[42px] 2xl:text-[52px]`}>
             m
           </span>
         </div>
@@ -82,7 +82,7 @@ const Minutes: FC<MinutesProps> = ({ time }) => {
         src={word4}
         alt=''
         priority
-        className='absolute left-auto right-10 top-[-1.2rem] hidden xl:block'
+        className='absolute left-auto right-10 top-[-1.2rem] hidden xl:block 2xl:right-11'
       />
     </div>
   );

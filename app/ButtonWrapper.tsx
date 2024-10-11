@@ -39,10 +39,10 @@ const ButtonWrapper: FC<ButtonWrapperProps> = ({}) => {
 
         {/* swag */}
         <div
-          className={`${times.className} absolute -right-[15px] -top-[200px] z-20 flex size-[150px] items-center justify-center text-center text-[16px] italic sm:-right-[55px] sm:-top-[350px] sm:size-[220px] xl:bottom-auto xl:left-auto xl:right-[-8rem] xl:top-[-10rem] xl:size-[160px]`}>
+          className={`${times.className} absolute -right-[15px] -top-[200px] z-20 flex size-[150px] items-center justify-center text-center text-[16px] italic sm:-right-[55px] sm:-top-[350px] sm:size-[220px] xl:bottom-auto xl:left-auto xl:right-[-8rem] xl:top-[-10rem] xl:size-[160px] 2xl:right-[-12rem] 2xl:top-[-12rem] 2xl:size-[200px]`}>
           <div
             style={{ lineHeight: 1.2 }}
-            className='absolute inset-0 z-20 flex items-center justify-center sm:text-2xl xl:-rotate-12 xl:text-[18px]'>
+            className='absolute inset-0 z-20 flex items-center justify-center sm:text-2xl xl:-rotate-12 xl:text-[18px] 2xl:text-[22px]'>
             A chance to
             <br />
             win a custom
@@ -58,14 +58,14 @@ const ButtonWrapper: FC<ButtonWrapperProps> = ({}) => {
           src={keyboardD}
           alt=''
           priority
-          className='absolute right-[-22rem] top-[-8rem] z-10 hidden w-[316px] max-w-none -rotate-12 xl:block'
+          className='absolute right-[-22rem] top-[-8rem] z-10 hidden w-[316px] max-w-none -rotate-12 xl:block 2xl:right-[-31rem] 2xl:top-[-9rem] 2xl:w-[412px]'
         />
 
         <Image
           src={star1}
           alt=''
           priority
-          className={`absolute right-[-24rem] top-[-6rem] hidden max-w-[150px] xl:block ${styles.spin}`}
+          className={`absolute right-[-24rem] top-[-6rem] hidden max-w-[150px] xl:block 2xl:right-[-34rem] 2xl:top-[-6rem] 2xl:max-w-[184px] ${styles.spin}`}
         />
 
         {/* keyboard */}

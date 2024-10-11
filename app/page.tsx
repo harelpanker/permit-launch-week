@@ -75,7 +75,7 @@ const Page = () => {
       <Logos />
 
       {/* content */}
-      <div className='relative z-10 mx-auto h-[386px] w-[340px] text-[#3A2F2F] sm:h-[676px] sm:w-[572px] xl:h-[366px] xl:w-[890px]'>
+      <div className='relative z-10 mx-auto h-[386px] w-[340px] text-[#3A2F2F] sm:h-[676px] sm:w-[572px] xl:h-[366px] xl:w-[890px] 2xl:h-[436px] 2xl:w-[1066px]'>
         <Days time={days} />
         <Hours time={hours} />
         <Minutes time={minutes} />

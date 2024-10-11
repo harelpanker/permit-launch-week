@@ -44,15 +44,15 @@ const Seconds: FC<SecondsProps> = ({ time }) => {
   const { width } = useViewportSize();
 
   return (
-    <div className='absolute bottom-0 right-3 z-20 w-full max-w-[160px] sm:max-w-[288px] xl:right-0 xl:top-0 xl:z-10 xl:max-w-[230px]'>
+    <div className='absolute bottom-0 right-3 z-20 w-full max-w-[160px] sm:max-w-[288px] xl:right-0 xl:top-0 xl:z-10 xl:max-w-[230px] 2xl:max-w-[274px]'>
       <div className='absolute inset-0 z-30 flex h-full w-full items-center justify-center'>
         <div className='relative bottom-12 left-[10px] sm:bottom-20'>
           <span
-            className={`${helvetica.className} text-[92px] tracking-[-0.05em] sm:text-[160px] xl:text-[140px]`}>
+            className={`${helvetica.className} text-[92px] tracking-[-0.05em] sm:text-[160px] xl:text-[140px] 2xl:text-[170px]`}>
             {time}
           </span>
           <span
-            className={`${times.className} relative -left-4 top-6 text-[30px] sm:text-[46px] xl:text-[42px]`}>
+            className={`${times.className} relative -left-4 top-6 text-[30px] sm:text-[46px] xl:text-[42px] 2xl:text-[52px]`}>
             s
           </span>
         </div>
