@@ -6,6 +6,9 @@ import Image from 'next/image';
 import comp3M from '@/app/assets/comp3-m.svg';
 import comp3D from '@/app/assets/comp3.svg';
 import word1 from '@/app/assets/word1.svg';
+import word2 from '@/app/assets/d-word4.svg';
+import word3 from '@/app/assets/d-word5.svg';
+import word4 from '@/app/assets/d-word6.svg';
 
 const times = localFont({
   src: [
@@ -63,6 +66,24 @@ const Minutes: FC<MinutesProps> = ({ time }) => {
         className='relative z-20'
       />
       <Image src={word1} alt='' priority className='pt-1 lg:hidden' />
+      <Image
+        src={word2}
+        alt=''
+        priority
+        className='absolute left-[2.5rem] top-[-1.5rem] hidden xl:block'
+      />
+      <Image
+        src={word3}
+        alt=''
+        priority
+        className='absolute left-[8rem] top-[-3rem] hidden xl:block'
+      />
+      <Image
+        src={word4}
+        alt=''
+        priority
+        className='absolute left-auto right-10 top-[-1.2rem] hidden xl:block'
+      />
     </div>
   );
 };

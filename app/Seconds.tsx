@@ -6,6 +6,7 @@ import Image from 'next/image';
 import comp4M from '@/app/assets/comp4-m.svg';
 import comp4D from '@/app/assets/comp4.svg';
 import word3 from '@/app/assets/word3.svg';
+import word7 from '@/app/assets/d-word7.svg';
 
 const times = localFont({
   src: [
@@ -65,6 +66,12 @@ const Seconds: FC<SecondsProps> = ({ time }) => {
       <div className='flex w-full justify-end pt-1 lg:hidden'>
         <Image src={word3} alt='' priority />
       </div>
+      <Image
+        src={word7}
+        alt=''
+        priority
+        className='absolute left-[1rem] top-[-1.5rem] hidden xl:block'
+      />
     </div>
   );
 };

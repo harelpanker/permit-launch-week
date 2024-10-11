@@ -6,6 +6,7 @@ import Image from 'next/image';
 import comp2M from '@/app/assets/comp2-m.svg';
 import comp2D from '@/app/assets/comp2.svg';
 import date from '@/app/assets/date.svg';
+import word from '@/app/assets/d-word3.svg';
 
 const times = localFont({
   src: [
@@ -64,7 +65,14 @@ const Hours: FC<HoursProps> = ({ time }) => {
       <Image
         src={date}
         alt=''
-        className='absolute -left-4 -top-6 z-40 -rotate-6 sm:-left-8 sm:-top-12 sm:w-[344px] xl:top-[-24px] xl:w-[330px]'
+        priority
+        className='absolute -left-4 -top-6 z-40 -rotate-6 sm:-left-8 sm:-top-12 sm:w-[344px] xl:-left-[11rem] xl:top-[-52px] xl:w-[330px] xl:max-w-none'
+      />
+      <Image
+        src={word}
+        alt=''
+        priority
+        className='absolute left-auto right-2 top-[-2rem] hidden xl:block'
       />
     </div>
   );

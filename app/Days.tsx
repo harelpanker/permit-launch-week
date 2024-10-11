@@ -7,6 +7,9 @@ import styles from './styles.module.css';
 import comp1M from '@/app/assets/comp1-m.svg';
 import comp1D from '@/app/assets/comp1.svg';
 import star1 from '@/app/assets/star1.svg';
+import keyboardD from '@/app/assets/keyboardD.png';
+import word1 from '@/app/assets/d-word1.svg';
+import word2 from '@/app/assets/d-word2.svg';
 
 const times = localFont({
   src: [
@@ -67,7 +70,25 @@ const Days: FC<DaysProps> = ({ time }) => {
         src={star1}
         alt=''
         priority
-        className={`absolute -left-10 -top-12 z-10 max-w-[140px] pt-1 sm:-left-20 sm:-top-20 sm:max-w-[200px] xl:-left-[60%] xl:top-20 xl:max-w-[150px] ${styles.spin}`}
+        className={`absolute -left-10 -top-12 z-10 max-w-[140px] pt-1 sm:-left-20 sm:-top-20 sm:max-w-[200px] xl:-left-[60%] xl:top-[8rem] xl:max-w-[150px] ${styles.spin}`}
+      />
+      <Image
+        src={keyboardD}
+        alt=''
+        priority
+        className='absolute -bottom-[120px] -left-[120px] z-10 hidden w-[316px] max-w-none rotate-12 xl:block'
+      />
+      <Image
+        src={word1}
+        alt=''
+        priority
+        className='absolute -left-8 -top-8 hidden xl:block'
+      />
+      <Image
+        src={word2}
+        alt=''
+        priority
+        className='absolute -top-20 left-4 hidden xl:block'
       />
     </div>
   );
