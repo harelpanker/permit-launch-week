@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import localFont from 'next/font/local';
 import Image from 'next/image';
 import styles from './styles.module.css';
@@ -22,9 +21,8 @@ const times = localFont({
     },
   ],
 });
-type ButtonWrapperProps = {};
 
-const ButtonWrapper: FC<ButtonWrapperProps> = ({}) => {
+const ButtonWrapper = () => {
   return (
     <div className='relative z-20 flex items-center justify-center'>
       <div className='relative'>
