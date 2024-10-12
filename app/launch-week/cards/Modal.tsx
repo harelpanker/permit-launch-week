@@ -17,7 +17,6 @@ import image3 from '@/app/launch-week/assets/modal/3.png';
 import image4 from '@/app/launch-week/assets/modal/4.png';
 import image5 from '@/app/launch-week/assets/modal/5.png';
 import ModalLink from './ModalLink';
-import { title } from 'process';
 
 const helvetica = localFont({
   src: [
@@ -28,20 +27,6 @@ const helvetica = localFont({
     },
     {
       path: '../../assets/Helvetica-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-});
-const times = localFont({
-  src: [
-    {
-      path: '../../assets/times-new-roman.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../assets/times-new-roman-bold.ttf',
       weight: '700',
       style: 'normal',
     },

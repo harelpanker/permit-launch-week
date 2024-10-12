@@ -26,7 +26,7 @@ const times = localFont({
 });
 
 const Card3 = () => {
-  let [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
