@@ -51,7 +51,7 @@ const Card2 = () => {
       </div>
       {/* swag desktop */}
       <div
-        className={`${times.className} pointer-events-none absolute left-[72%] top-[48%] z-10  hidden size-[120px] items-center justify-center text-center text-xl font-bold italic text-white xl:flex xl:size-[200px]`}>
+        className={`${times.className} pointer-events-none absolute left-[72%] top-[48%] z-10 hidden  size-[120px] items-center justify-center text-center text-xl font-bold italic text-white xl:flex xl:size-[200px] 2xl:top-[70%]`}>
         <div
           style={{ lineHeight: 1.2 }}
           className='absolute inset-0 z-20 flex -rotate-6 items-center justify-center'>
