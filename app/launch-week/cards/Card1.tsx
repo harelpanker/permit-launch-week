@@ -26,14 +26,16 @@ const times = localFont({
 });
 
 interface ShareNameImageProps {
-  defaultName?: string;
+  name?: string;
+  number?: number;
   backgroundImageUrl: string;
   xPosition?: number;
   yPosition?: number;
 }
 
 const Card1: FC<ShareNameImageProps> = ({
-  defaultName = 'John Doe',
+  name = 'John Doe',
+  number = 306,
   backgroundImageUrl = 'https://media.graphassets.com/UszeNnrUTCMKWhAXw5we',
   xPosition = 0.5,
   yPosition = 0.5,
@@ -93,9 +95,38 @@ const Card1: FC<ShareNameImageProps> = ({
   return (
     <li className='relative flex flex-col items-center justify-center'>
       <div className='relative'>
-        <NextImage src={cImage} alt='' priority />
-        <div className='absolute left-1/2 top-1/2 w-[105%] -translate-x-1/2 -translate-y-1/2 -rotate-6'>
+        {/* swag */}
+        <div
+          className={`${times.className} pointer-events-none absolute -left-[3rem] -top-12 z-10 flex size-[150px] items-center justify-center text-center text-sm font-bold italic text-white sm:bottom-[-9rem] sm:left-auto sm:right-[-1rem] sm:top-auto xl:bottom-[-11rem] xl:right-[-5rem] xl:size-[200px] xl:text-xl`}>
+          <div
+            style={{ lineHeight: 1.2 }}
+            className='absolute inset-0 z-20 flex -rotate-45 items-center justify-center sm:-rotate-6'>
+            for a chance
+            <br />
+            to get a
+            <br />
+            SWAG package!
+          </div>
+          <div className={`${styles.spin}`}>
+            <NextImage src={star2} alt='' />
+          </div>
+        </div>
+        <NextImage className='relative z-20' src={cImage} alt='' priority />
+        <div className='absolute left-1/2 top-1/2 z-30 w-[105%] -translate-x-1/2 -translate-y-1/2 -rotate-6'>
           <NextImage src={cardImage} alt='' priority className='w-full' />
+          <div
+            className={`${times.className} absolute inset-0 left-[60%] top-[36%] text-white lg:top-[30%] xl:top-[34%]`}>
+            <div className='flex flex-col'>
+              <div
+                style={{ lineHeight: 1 }}
+                className='max-w-[96px] text-2xl sm:text-4xl lg:max-w-[74px] lg:text-lg xl:max-w-[96px] xl:text-2xl 2xl:text-3xl'>
+                {name}
+              </div>
+              <div className='text-[#D699FF] sm:text-xl lg:text-base 2xl:text-lg'>
+                #{number}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className='relative'>
@@ -124,24 +155,8 @@ const Card1: FC<ShareNameImageProps> = ({
                 transform: 'translate(50%, -50%)',
                 lineHeight: 1,
               }}>
-              {defaultName}
+              {name}
             </div>
-          </div>
-        </div>
-        {/* swag */}
-        <div
-          className={`${times.className} pointer-events-none absolute -right-[6rem] -top-4 z-10 flex size-[150px] items-center justify-center text-center text-sm font-bold italic text-white xl:-top-8 xl:size-[200px] xl:text-xl`}>
-          <div
-            style={{ lineHeight: 1.2 }}
-            className='absolute inset-0 z-20 flex items-center justify-center xl:-rotate-6'>
-            for a chance
-            <br />
-            to get a
-            <br />
-            SWAG package!
-          </div>
-          <div className={`${styles.spin}`}>
-            <NextImage src={star2} alt='' />
           </div>
         </div>
       </div>
