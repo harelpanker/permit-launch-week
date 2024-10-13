@@ -28,7 +28,7 @@ const times = localFont({
 interface ShareNameImageProps {
   name?: string;
   number?: number;
-  backgroundImageUrl: string;
+  backgroundImageUrl?: string;
   xPosition?: number;
   yPosition?: number;
 }
