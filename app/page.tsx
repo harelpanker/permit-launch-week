@@ -16,22 +16,20 @@ const Page = () => {
   const { days, hours, minutes, seconds } = useCountdown();
   const router = useRouter();
 
+  const updateUrlWithParams = () => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('days', days.toString());
+    url.searchParams.set('hours', hours.toString());
+    url.searchParams.set('minutes', minutes.toString());
+    url.searchParams.set('seconds', seconds.toString());
+
+    // Update the URL without reloading the page
+    router.replace(url.toString(), { scroll: false });
+  };
+
   useEffect(() => {
-    // Function to update the URL with the new UTM parameters
-    const updateUrlWithParams = () => {
-      const url = new URL(window.location.href);
-      url.searchParams.set('days', days.toString());
-      url.searchParams.set('hours', hours.toString());
-      url.searchParams.set('minutes', minutes.toString());
-      url.searchParams.set('seconds', seconds.toString());
-
-      // Update the URL without reloading the page
-      router.replace(url.toString(), { scroll: false });
-    };
-
-    // Call the function when the countdown values change
     updateUrlWithParams();
-  }, [days, hours, minutes, seconds, router]);
+  }, [minutes]);
 
   return (
     <section

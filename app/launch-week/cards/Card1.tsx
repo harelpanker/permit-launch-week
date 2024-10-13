@@ -42,6 +42,17 @@ const Card1: FC<ShareNameImageProps> = ({
 }) => {
   const compositeRef = useRef<HTMLDivElement>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset the copied state after 2 seconds
+    } catch (err) {
+      console.error('Failed to copy!', err);
+    }
+  };
 
   useEffect(() => {
     const img = new Image();
@@ -133,9 +144,12 @@ const Card1: FC<ShareNameImageProps> = ({
         <div className='relative z-20 -mt-[12%]'>
           <button
             type='button'
-            onClick={shareImage}
+            onClick={() => {
+              shareImage();
+              copyToClipboard();
+            }}
             className={`${styles.button}`}>
-            Share your ticket
+            {copied ? 'Copied!' : 'Share your ticket'}
           </button>
 
           {/* share image */}
